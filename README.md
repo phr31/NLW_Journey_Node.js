@@ -3,7 +3,7 @@
 </h1>
 
 <p>
-  <img src="https://github.com/phr31/NLW_Journey_Node.js/tree/main/img/cover.png" alt="Capa do projeto" />
+  <img src="./img/cover.png" alt="Capa do projeto" />
 </p>
 
 <h4 align="center"> 
