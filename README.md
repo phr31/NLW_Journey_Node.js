@@ -1,37 +1,13 @@
 <h1 align="center">
-  <img
-    src=".github/nlw-journey-logo.png"
-    title="Logo NLW Journey"
-    alt="Logo NLW Journey"
-    width="64px"
-  />
   NLW Journey (Node)
 </h1>
 
-<p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/pabloxt14/nlw-journey-node">
-
-  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/pabloxt14/nlw-journey-node" />
-
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/pabloxt14/nlw-journey-node">
-  
-  <a href="https://github.com/pabloxt14/nlw-journey-node/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pabloxt14/nlw-journey-node">
-  </a>
-    
-   <img alt="License" src="https://img.shields.io/badge/license-MIT-blue">
-
-   <a href="https://github.com/pabloxt14/nlw-journey-node/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/pabloxt14/nlw-journey-node?style=social">
-  </a>
-</p>
-
 <p>
-  <img src=".github/cover.png" alt="Capa do projeto" />
+  <img src="https://github.com/phr31/NLW_Journey_Node.js/tree/main/img/cover.png" alt="Capa do projeto" />
 </p>
 
 <h4 align="center"> 
-	🚀 Aplicação finalizada 🚀
+	🚀 Aplicação em desenvolvimento 🚀
 </h4>
 
 <p align="center">
@@ -42,18 +18,15 @@
  <a href="#-license">License</a>
 </p>
 
-
 ## 💻 About
 
 Esta é a API da aplicação de nome **Plann.er**, a qual consiste em um sistema de planejamento de viagens, na qual você pode montar planos de viagens com amigos, registrar atividades, adicionar links úteis sobre a viagem, entre diversas outras funcionalidades.
 
 Essa aplicação foi desenvolvida durante o evento **NLW Journey** da [Rocketseat](https://www.rocketseat.com.br/) utilizando principalmente tecnologias como `Node`, `TypeScript` e `Fastify`.
 
-
 <!-- ## 🔗 Deploy
 
-O deploy da aplicação pode ser acessada através da seguinte URL base: https://pabloxt14-nlw-expert-notes.vercel.app/ -->
-
+O deploy da aplicação ainda será realizado-->
 
 ## ⛕ Routes
 
@@ -127,8 +100,6 @@ Altera uma viagem.
   "tripId": "f944daf7-e7e6-47a2-b050-1556d6a9e963"
 }
 ```
-
-
 
 #### GET `/trips/:tripId/confirm`
 
@@ -314,15 +285,38 @@ Retorna os links de uma viagem.
 }
 ```
 
+### Activities Routes
+
+Caso ocorra um erro como "self-signed certificate in certificate chain" ao realizar uma requisição ao servidor, usar a seguinte configuração no arquivo "mail.tsx"
+
+##### mail.tsx
+```tsx
+const transporter = nodemailer.createTransport({
+  host: 'smtp.ethereal.email',
+  port: 587,
+  secure: false,
+  auth: {
+    user: account.user,
+    pass: account.pass,
+  },
+  tls: {
+    // do not fail on invalid certs
+    rejectUnauthorized: false,
+  },
+});
+```
+
+[Nodemailer > SMTP transport](https://nodemailer.com/smtp/)
+
 ## ⚙ Setup
 
 ### 📝 Requisites
 
 Antes de baixar o projeto você vai precisar ter instalado na sua máquina as seguintes ferramentas:
 
-* [Git](https://git-scm.com)
-* [NodeJS](https://nodejs.org/en/)
-* [NPM](https://www.npmjs.com/), [PNPM](https://pnpm.io/pt/) ou [Yarn](https://yarnpkg.com/) 
+- [Git](https://git-scm.com)
+- [NodeJS](https://nodejs.org/en/)
+- [NPM](https://www.npmjs.com/), [PNPM](https://pnpm.io/pt/) ou [Yarn](https://yarnpkg.com/)
 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
@@ -334,7 +328,7 @@ Passo a passo para clonar e executar a aplicação na sua máquina:
 
 ```bash
 # Clone este repositório
-$ git clone git@github.com:pabloxt14/nlw-journey-node.git
+$ git clone https://github.com/phr31/NLW_Journey_Node.js.git
 
 # Acesse a pasta do projeto no terminal
 $ cd nlw-journey-node
@@ -342,7 +336,7 @@ $ cd nlw-journey-node
 # Instale as dependências
 $ npm install
 
-# Crie o arquivo '.env' e preencha as variáveis conforme o arquivo '.env.example' 
+# Crie o arquivo '.env' e preencha as variáveis conforme o arquivo '.env.example'
 
 # Execute as migrations para criar as tabelas necessários no banco
 $ npx prisma migrate-dev
@@ -350,9 +344,8 @@ $ npx prisma migrate-dev
 # Execute a aplicação em modo de desenvolvimento
 $ npm run dev
 
-# A aplicação inciará na porta que você configurou no arquivo '.env' 
+# A aplicação inciará na porta que você configurou no arquivo '.env'
 ```
-
 
 ## 🛠 Technologies
 
@@ -367,11 +360,10 @@ As seguintes principais ferramentas foram usadas na construção do projeto:
 
 > Para mais detalhes das dependências gerais da aplicação veja o arquivo [package.json](./package.json)
 
-
 ## 📝 License
 
 Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](./LICENSE) para mais informações
 
 <p align="center">
-  Feito com 💜 por Pablo Alan 👋🏽 <a href="https://www.linkedin.com/in/pabloalan/" target="_blank">Entre em contato!</a>  
+  Feito por Paulo Henrique Rodrigues 👋🏽 <a href="https://www.linkedin.com/in/paulo-rodrigues-aba95986/" target="_blank">Entre em contato!</a>  
 </p>
