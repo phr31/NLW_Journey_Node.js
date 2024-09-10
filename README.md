@@ -339,7 +339,7 @@ $ npm install
 # Crie o arquivo '.env' e preencha as variáveis conforme o arquivo '.env.example'
 
 # Execute as migrations para criar as tabelas necessários no banco
-$ npx prisma migrate-dev
+$ npx prisma migrate dev
 
 # Execute a aplicação em modo de desenvolvimento
 $ npm run dev
