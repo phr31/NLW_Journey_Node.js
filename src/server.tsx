@@ -19,6 +19,18 @@ import { getParticipant } from './routes/get-participant'
 import { errorHandler } from './error-handler'
 import { env } from './env'
 
+require('dotenv').config();
+
+const databaseUrl = process.env.DATABASE_URL;
+const apiBaseUrl = process.env.API_BASE_URL;
+const webBaseUrl = process.env.WEB_BASE_URL;
+const port = process.env.PORT;
+
+console.log('Database URL:', databaseUrl);
+console.log('API Base URL:', apiBaseUrl);
+console.log('Web Base URL:', webBaseUrl);
+console.log('Port:', port);
+
 const app = fastify()
 
 app.register(cors, {
